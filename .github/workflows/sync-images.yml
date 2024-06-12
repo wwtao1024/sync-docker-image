@@ -42,7 +42,7 @@ jobs:
                 repo=$(echo $line |awk -F / '{print $1"/"$2"/"}')
                 image=$(echo $line |awk -F / '{print $3}')
 
-            elfi [[ "$line"== */* ]]; then
+            elif [[ "$line"== */* ]]; then
                 repo=$(echo $line |awk -F / '{print $1"/"}')
                 image=$(echo $line |awk -F / '{print $2}')
 
