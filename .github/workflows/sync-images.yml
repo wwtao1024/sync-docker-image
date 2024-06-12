@@ -37,7 +37,11 @@ jobs:
               continue
             fi
 
-
+            if [[ "$line"== "*/*/*" ]]; then
+                repo=$(echo $line |awk -F / '{print $1"/"$2"/"}')
+                image=$(echo $line |awk -F / '{print $3}')
+                echo "$repo $image"
+            fi
 
       
         done < docker-images.txt 
