@@ -35,7 +35,6 @@ jobs:
 
         while read line
         do
-       
             registry_url=$(echo $line|awk '{print $1}')
             image_name=$(echo $line|awk '{print $2}')
            
@@ -43,6 +42,6 @@ jobs:
 
             [ -z $registry_url ] && continue
 
-            skopeo copy docker://${registry_url}${image_name}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${registry_url}${image_name}
+            skopeo copy docker://${registry_url}${image_name}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${image_name}
 
         done < docker-images.txt 
