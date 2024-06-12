@@ -38,12 +38,7 @@ jobs:
        
             registry_url=$(echo $line|awk '{print $1}')
             image_name=$(echo $line|awk '{print $2}')
-            image_version=$(echo $line|awk '{print $3}')
-
-            [ -z $image_version ] && image_version=latest
-            
-            echo "skopeo copy docker://${registry_url}${image_name}:${image_version}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${image_name}:${image_version}"
-
-            skopeo copy docker://${registry_url}${image_name}:${image_version}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${image_name}:${image_version}
+           
+            [ -z $image_name ] &&  image_name=$registry_url && skopeo copy docker://${image_name}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${image_name}
         
         done < docker-images.txt 
