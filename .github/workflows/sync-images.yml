@@ -40,8 +40,6 @@ jobs:
            
             [ -z $image_name ] &&  image_name=$registry_url && skopeo copy docker://${image_name}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${image_name}
 
-            [ -z $registry_url ] && continue
-
-            skopeo copy docker://${registry_url}${image_name}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${image_name}
-
+            [ ! -z $registry_url ] && skopeo copy docker://${registry_url}${image_name}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${image_name}
+      
         done < docker-images.txt 
