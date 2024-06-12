@@ -1,2 +1,6 @@
 gcr.io/kaniko-project/   executor   
+prom/    prometheus:v2.31.1
+
+nginx:1.23.0
 nginx
+
