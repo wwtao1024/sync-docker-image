@@ -38,11 +38,19 @@ jobs:
               continue
             fi
 
-            registry_url=$(echo $line|awk '{print $1}')
-            image_name=$(echo $line|awk '{print $2}')
-           
-            [ -z $image_name ] &&  image_name=$registry_url && skopeo copy docker://${image_name}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${image_name}
+            if [[ "$line"== */*/* ]]; then
+                repo=$(echo $line |awk -F / '{print $1"/"$2"/"}')
+                image=$(echo $line |awk -F / '{print $3}')
 
-            skopeo copy docker://${registry_url}${image_name}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${image_name}
+            elfi [[ "$line"== */* ]]; then
+                repo=$(echo $line |awk -F / '{print $1"/"}')
+                image=$(echo $line |awk -F / '{print $2}')
+
+            else
+                skopeo copy docker://${line}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${line}
+                continue
+            fi
+
+            skopeo copy docker://${repo}${image}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE }}/${image}
       
         done < docker-images.txt 
