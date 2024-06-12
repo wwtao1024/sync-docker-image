@@ -43,8 +43,6 @@ jobs:
 
             [ -z $registry_url ] && continue
 
-            echo " skopeo copy docker://${registry_url}${image_name}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${registry_url}${image_name}"
-            
             skopeo copy docker://${registry_url}${image_name}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE}}/${registry_url}${image_name}
 
         done < docker-images.txt 
