@@ -37,11 +37,9 @@ jobs:
               continue
             fi
 
-            if [[ "$line"== *\/*\/* ]]; then
-                repo=$(echo $line |awk -F / '{print $1"/"$2"/"}')
-                image=$(echo $line |awk -F / '{print $3}')
-                echo "$repo $image"
-            fi
+            image=$(echo $line |awk -F '/' '{if(NR==3)print print $3;else if(NR==2)print print $2;else print $1 }')
+        
+            skopeo copy docker://${line}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE }}/${image}
 
       
         done < docker-images.txt 
