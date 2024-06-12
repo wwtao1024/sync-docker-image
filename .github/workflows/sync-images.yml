@@ -37,7 +37,7 @@ jobs:
               continue
             fi
 
-            image=$(echo $line |awk -F '/' '{if(NR==3)print print $3;else if(NR==2)print print $2;else print $1 }')
+            image=$(echo $line |awk -F '/' '{if(NR==3)print $3;else if(NR==2)print  $2;else print $1 }')
         
             skopeo copy docker://${line}  docker://${{ secrets.ALIYUN_REGISTRY }}/${{ secrets.ALIYUN_NAMESPACE }}/${image}
 
