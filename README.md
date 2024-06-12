@@ -6,5 +6,5 @@
     - DOCKER_USERNAME     // 用户名
     - DOCKER_PASSWORD     // 密码
 
-需要同步的镜像写入 docke0images.txt 提交即可同步
+需要同步的镜像写入 docker-images.txt 提交即可同步
 
