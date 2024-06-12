@@ -31,10 +31,8 @@ jobs:
         
     - name: Use Skopeo Tools Sync Image 
       run: |
-        #!/bin/bash
+        while read -r line; do
         
-        while read -r line
-        do
             if [[ -z "$line" || "$line" == \#* ]]; then
               continue
             fi
