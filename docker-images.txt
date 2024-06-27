@@ -7,3 +7,7 @@ alpine
 timonwong/prometheus-webhook-dingtalk
 jimmidyson/configmap-reload:v0.1
 prom/node-exporter:v1.3.1
+prom/alertmanager:latest
+jimmidyson/configmap-reload:v0.1
+timonwong/prometheus-webhook-dingtalk
+grafana/grafana:8.4.4
