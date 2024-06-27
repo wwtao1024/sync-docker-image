@@ -6,3 +6,4 @@ nginx:1.14.2
 alpine
 timonwong/prometheus-webhook-dingtalk
 jimmidyson/configmap-reload:v0.1
+prom/node-exporter:v1.3.1
