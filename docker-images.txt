@@ -1,14 +1,4 @@
-# 例如
-
-docker.elastic.co/beats/filebeat:7.6.0
-prom/prometheus:v2.31.1
-nginx:1.14.2
-alpine
-timonwong/prometheus-webhook-dingtalk
-jimmidyson/configmap-reload:v0.1
-prom/node-exporter:v1.3.1
-prom/alertmanager:latest
-jimmidyson/configmap-reload:v0.1
-timonwong/prometheus-webhook-dingtalk
-grafana/grafana:8.4.4
-budtmo/docker-android:emulator_9.0
+# 例如 
+# 一行一个
+# nginx:1.14.2
+# alpine
