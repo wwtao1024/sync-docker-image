@@ -11,3 +11,4 @@ prom/alertmanager:latest
 jimmidyson/configmap-reload:v0.1
 timonwong/prometheus-webhook-dingtalk
 grafana/grafana:8.4.4
+budtmo/docker-android:emulator_9.0
