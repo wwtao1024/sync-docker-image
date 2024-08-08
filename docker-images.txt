@@ -3,3 +3,4 @@
 # nginx:1.14.2
 # alpine
 redis:7
+registry.hub.docker.com/onething1/wxedge
