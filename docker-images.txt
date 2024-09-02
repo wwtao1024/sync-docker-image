@@ -7,3 +7,4 @@ drone/drone-runner-docker:latest
 jupyter/base-notebook:x86_64-notebook-7.0.6
 drone/git:latest
 alpine/git
+plugins/docker
