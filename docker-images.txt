@@ -4,3 +4,4 @@
 # alpine
 weejewel/wg-easy
 bitnami/kubectl:latest
+golang:1.20
