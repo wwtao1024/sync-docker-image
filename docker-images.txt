@@ -1,7 +1,6 @@
-
 # 例如 
 # 一行一个
 # nginx:1.14.2
 # alpine
-
+weejewel/wg-easy
 bitnami/kubectl:latest
