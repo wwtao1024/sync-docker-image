@@ -3,3 +3,4 @@
 # nginx:1.14.2
 # alpine
 debian
+lddsb/drone-dingtalk-message
