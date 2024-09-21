@@ -1,6 +1,4 @@
-# 例如 
-# 一行一个
-# nginx:1.14.2
-# alpine
-debian
-lddsb/drone-dingtalk-message
+docker.io/kubesphere/ks-extensions-museum:latest
+docker.io/kubesphere/ks-apiserver:v4.1.1
+docker.io/kubesphere/ks-console:v4.1.1
+docker.io/kubesphere/ks-controller-manager:v4.1.1
