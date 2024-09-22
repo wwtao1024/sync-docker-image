@@ -1,4 +1,1 @@
-docker.io/kubesphere/ks-extensions-museum:latest
-docker.io/kubesphere/ks-apiserver:v4.1.1
-docker.io/kubesphere/ks-console:v4.1.1
-docker.io/kubesphere/ks-controller-manager:v4.1.1
+registry.k8s.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2
