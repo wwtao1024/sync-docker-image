@@ -1,1 +1,1 @@
-mysql:8.4.2
+nacos/nacos-server:v2.2.0-slim
