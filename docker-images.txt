@@ -1,1 +1,1 @@
-docker.io/kubesphere/builder-maven:v3.2.0
+docker.io/jenkins/inbound-agent:4.10-2
