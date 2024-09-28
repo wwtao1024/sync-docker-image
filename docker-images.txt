@@ -1,1 +1,1 @@
-docker.io/kubesphere/devops-jenkins:v4.1.2-2.346.3
+redis:7.4.0
