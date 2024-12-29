@@ -1,1 +1,1 @@
-docker.io/jenkins/inbound-agent:4.10-2
+docker.io/nacos/nacos-server:v2.4.2-slim
